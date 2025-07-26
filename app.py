@@ -4,7 +4,7 @@ from langchain_core.messages import HumanMessage
 import streamlit as st
 
 # 🔐 Directly set the API key
-os.environ["GOOGLE_API_KEY"] = "AIzaSyAHccWgot5mIvSGgVz4Bp-sXnkOo68ky_w"  # Replace with your real API key
+os.environ["GOOGLE_API_KEY"] = st.secrets["GOOGLE_API_KEY"]  # Replace with your real API key
 
 # Model setup
 llm = ChatGoogleGenerativeAI(model="models/gemini-1.5-flash-latest", temperature=0.2)
